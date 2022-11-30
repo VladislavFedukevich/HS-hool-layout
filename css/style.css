@@ -1,0 +1,62 @@
+main, header ul, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  width: 1120px;
+}
+
+header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  margin: 0 0 160px 0;
+}
+header .logo {
+  width: 124px;
+  height: 38px;
+  background: url(/assets/logo.svg) no-repeat;
+}
+header ul {
+  width: 505px;
+}
+header ul li {
+  list-style: none;
+  font: 700 16px "Mulish";
+}
+header .btn-sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 147px;
+  height: 50px;
+  background: linear-gradient(44.11deg, #8FBBE5 15.75%, #3D75BF 84.63%);
+  border-radius: 33px;
+  font: 700 16px "Mulish";
+  color: #FFFFFF;
+}
+
+main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
