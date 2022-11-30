@@ -1,6 +1,24 @@
+$dark-blue: #001A49;
+$dark-grey: #4F596A;
+
 %flex-items {
   display: flex;
   justify-content: space-between;
+}
+
+%flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+%center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%big-text {
+  font: 400 20px 'Mulish';
 }
 
 * {
@@ -48,7 +66,143 @@ header {
   }
 }
 
-main {
+.first-section {
   @extend %flex-items;
   flex-direction: column;
+  width: 560px;
+  height: 300px;
+  margin: 0 0 330px 0;
+
+  h1 {
+    font: 700 60px 'Montserrat';
+    color: $dark-blue;
+  }
+
+  .big-text {
+    @extend %big-text;
+  }
+
+  .big-btn-sign-up {
+    @extend %center-items;
+    width: 206px;
+    height: 70px;
+    color: white;
+    background: linear-gradient(44.11deg, #8FBBE6 15.75%, #3D75BF 84.63%);
+    border-radius: 33px;
+    font: 700 20px 'Mulish';
+  }
+
+  .video-img {
+    @extend %center-items;
+    width: 590px;
+    height: 373px;
+    position: absolute;
+    left: 850px;
+    top: 270px;
+    background: #001A49;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0px 32px 44px #818A8C;
+
+    .play {
+      width: 70px;
+      height: 70px;
+      background: url(/assets/Play.png) no-repeat;
+    }
+  }
+}
+
+.count-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #E7EAEB;
+  border-radius: 21px;
+  z-index: 100;
+  margin: 0 0 150px 0;
+
+  .block-count {
+    @extend %flex-align-center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 72px;
+    margin: 50px 0;
+
+    h2 {
+      font: 700 40px 'Montserrat';
+      color: $dark-blue;
+    }
+
+    p {
+      font: 400 16px 'Mulish';
+      color: $dark-grey;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .vertical-line {
+    width: 1px;
+    min-height: 112px;
+    background: #E7EAEB;
+  }
+}
+
+.benefits {
+  @extend %flex-items;
+  flex-direction: column;
+
+  .benefits-header {
+    text-align: center;
+    font: 700 46px 'Montserrat';
+    margin: 0 0 10px 0;
+    color: $dark-blue;
+  }
+
+  .big-text {
+    @extend %big-text;
+    text-align: center;
+    margin: 0 0 60px 0;
+    color: $dark-grey;
+  }
+
+
+  .circle {
+    @extend %center-items;
+    width: 64px;
+    height: 64px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0535402);
+
+    .icon {
+      width: 40px;
+      height: 33px;
+      background: url(/assets/Icon.svg) no-repeat;
+    }
+  }
+
+  .benefit-part {
+    @extend %center-items;
+    justify-content: space-around;
+    height: 172px;
+    background: linear-gradient(44.11deg, #99c5f20f, #3d75bf0f);
+    border-radius: 21px;
+    margin: 0 0 30px 0;
+
+    .text {
+      max-width: 930px;
+    }
+
+    h1 {
+      font: 700 24px 'Montserrat';
+      color: $dark-blue;
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      font: 400 16px 'Mulish';
+      color: $dark-grey;
+    }
+  }
 }
